@@ -22,7 +22,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   photosCount,
   messagesCount,
 }) => {
-  const isAguarde = new Date() <= new Date('2024-10-10T23:59:59');
+  // Target event date: 10/10/2026 (14 Anos de Casamento 2012 - 2026)
+  const targetEventDate = new Date('2026-10-10T23:59:59');
+  const isAguarde = new Date() <= targetEventDate;
 
   return (
     <header className="sticky top-0 z-40 bg-[#fdfbf7]/90 backdrop-blur-md border-b border-[#e8dfd5] shadow-xs transition-all">
