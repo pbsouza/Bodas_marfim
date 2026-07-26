@@ -1,0 +1,10 @@
+{
+  "name": "Bianca \u0026 Pedro: Bodas de Marfim",
+  "description": "Compartilhando em tempo real as fotos e mensagens para as bodas de marfim de Bianca e Pedro.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

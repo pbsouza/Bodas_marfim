@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "photos": {
+      "title": "Photos",
+      "description": "Fotos compartilhadas pelos convidados da festa de 14 anos de Bianca e Pedro",
+      "properties": {
+        "photoUrl": {
+          "type": "string",
+          "description": "Base64 data url or image link"
+        },
+        "authorName": {
+          "type": "string",
+          "description": "Nome do convidado"
+        },
+        "caption": {
+          "type": "string",
+          "description": "Legenda da foto"
+        },
+        "likes": {
+          "type": "number",
+          "description": "Quantidade de curtidas"
+        },
+        "filter": {
+          "type": "string",
+          "description": "Filtro aplicado"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Data de envio"
+        }
+      },
+      "required": [
+        "photoUrl",
+        "authorName",
+        "createdAt"
+      ]
+    },
+    "messages": {
+      "title": "Messages",
+      "description": "Mural de recados para os noivos Bianca e Pedro",
+      "properties": {
+        "authorName": {
+          "type": "string",
+          "description": "Nome do convidado"
+        },
+        "content": {
+          "type": "string",
+          "description": "Texto do recado"
+        },
+        "category": {
+          "type": "string",
+          "description": "Categoria do recado"
+        },
+        "likes": {
+          "type": "number",
+          "description": "Quantidade de curtidas"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Data de envio"
+        }
+      },
+      "required": [
+        "authorName",
+        "content",
+        "createdAt"
+      ]
+    }
+  }
+}
