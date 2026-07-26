@@ -22,6 +22,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   photosCount,
   messagesCount,
 }) => {
+  const isAguarde = new Date() <= new Date('2024-10-10T23:59:59');
+
   return (
     <header className="sticky top-0 z-40 bg-[#fdfbf7]/90 backdrop-blur-md border-b border-[#e8dfd5] shadow-xs transition-all">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3">
@@ -46,10 +48,17 @@ export const Navbar: React.FC<NavbarProps> = ({
               <p className="text-xs text-[#8c7a6b] font-medium flex items-center gap-1">
                 <span>Bodas de Marfim</span>
                 <span className="text-[#c59b27]">•</span>
-                <span className="text-emerald-700 font-semibold flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Ao Vivo
-                </span>
+                {isAguarde ? (
+                  <span className="text-red-700 font-semibold flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                    Aguarde
+                  </span>
+                ) : (
+                  <span className="text-emerald-700 font-semibold flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Ao Vivo
+                  </span>
+                )}
               </p>
             </div>
           </div>
